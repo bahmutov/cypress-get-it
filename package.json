@@ -1,6 +1,6 @@
 {
   "name": "cypress-get-it",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Get elements by data attribute by creating a Cy command on the fly",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "3.1.4",
-    "semantic-release": "15.13.3"
+    "semantic-release": "^15.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/cypress-get-it.git"
   }
 }

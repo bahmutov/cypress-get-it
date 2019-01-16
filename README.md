@@ -4,6 +4,46 @@
 
 [![NPM][npm-icon] ][npm-url]
 
+## Why
+
+According to the Cypress best practices for [Selecting Elements](https://on.cypress.io/best-practices#Selecting-Elements) using dedicated test id data attributes is the most stable way of finding elements during end-to-end tests. Yet typing the full selector is ... annoying.
+
+```html
+<div data-test-id="foo">foo</div>
+```
+```js
+cy.get('[data-test-id="foo"]').should('have.text', 'foo')
+```
+
+Who has time for this!
+
+So you could make a little utility function
+
+```js
+const tid = s => `[data-test-id="${s}"]`
+cy.get(tid('foo')).should('have.text', 'foo')
+```
+
+Hmm, sure, but what if your HTML markup has different data attributes? Like this
+
+```html
+<div data-test-id="foo">foo</div>
+<div data-test="bar">bar</div>
+<div test-id="baz">baz</div>
+```
+
+Do you need to write 3 different helper functions? No. With `cypress-get-it` you can create data attribute selector _methods_ with descriptive names. In fact, the actual selector will be created _from the method name_ on the fly. You want to get element with `data-test-id=foo`? Just use camel cased words and call `cy.getDataTestId('foo')`. The above elements become
+
+```js
+cy.getDataTestId('foo').should('have.text', 'foo')
+cy.getDataTest('bar').should('have.text', 'bar')
+cy.getTestId('baz').should('have.text', 'baz')
+```
+
+## How it works
+
+Load this plugin from your support file and it will replace global `cy` instance with an ES6 Proxy which will intercept any methods calls to `get...` and will call [`cy.get`](https://on.cypress.io/get) with the right selector automatically.
+
 ## Install and use
 
 ```shell
