@@ -40,6 +40,8 @@ cy.getDataTest('bar').should('have.text', 'bar')
 cy.getTestId('baz').should('have.text', 'baz')
 ```
 
+So any element attribute like `foo-bar-baz="something"` could be fetched with descriptive `cy.getFooBarBaz("something")`.
+
 ## How it works
 
 Load this plugin from your support file and it will replace global `cy` instance with an ES6 Proxy which will intercept any methods calls to `get...` and will call [`cy.get`](https://on.cypress.io/get) with the right selector automatically.
