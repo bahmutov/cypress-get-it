@@ -40,6 +40,8 @@ cy.getDataTest('bar').should('have.text', 'bar')
 cy.getTestId('baz').should('have.text', 'baz')
 ```
 
+![cypress-get-it](img/get-it.png)
+
 So any element attribute like `foo-bar-baz="something"` could be fetched with descriptive `cy.getFooBarBaz("something")`.
 
 ## How it works
