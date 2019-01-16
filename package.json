@@ -1,12 +1,15 @@
 {
   "name": "cypress-get-it",
   "version": "1.0.0",
-  "description": "",
+  "description": "Get elements by data attribute by creating a Cy command on the fly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run"
   },
-  "keywords": [],
+  "keywords": [
+    "cypress",
+    "cypress-plugin"
+  ],
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
   "license": "ISC",
   "devDependencies": {
