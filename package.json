@@ -14,7 +14,7 @@
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "3.5.0",
+    "cypress": "3.6.0",
     "semantic-release": "15.13.28"
   },
   "repository": {
