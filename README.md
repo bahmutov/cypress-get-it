@@ -98,7 +98,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[npm-icon]: https://nodei.co/npm/cypress-skip-and-only-ui.svg?downloads=true
-[npm-url]: https://npmjs.org/package/cypress-skip-and-only-ui
+[npm-icon]: https://nodei.co/npm/cypress-get-it.svg?downloads=true
+[npm-url]: https://npmjs.org/package/cypress-get-it
 [renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
 [renovate-app]: https://renovateapp.com/
